@@ -1,0 +1,6 @@
+{
+  "required": "{{field}} is required",
+  "email": "Please enter a valid email address",
+  "minLength": "{{field}} must be at least {{count}} characters",
+  "maxLength": "{{field}} must be at most {{count}} characters"
+}

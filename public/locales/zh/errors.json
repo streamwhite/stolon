@@ -1,0 +1,12 @@
+{
+  "network": "网络错误，请检查网络连接后重试。",
+  "validation": "请检查表单并修正标出的错误。",
+  "unauthenticated": "请登录后继续。",
+  "forbidden": "您没有权限执行此操作。",
+  "not_found": "未找到请求的资源。",
+  "conflict": "与现有更改冲突，请刷新后重试。",
+  "rate_limited": "请求过于频繁，请稍后再试。",
+  "server": "服务器错误，请稍后再试。",
+  "unknown": "发生了意外错误。",
+  "timeout": "请求超时，请重试。"
+}

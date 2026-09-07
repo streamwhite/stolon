@@ -1,0 +1,6 @@
+{
+  "required": "{{field}}为必填项",
+  "email": "请输入有效的邮箱地址",
+  "minLength": "{{field}}至少需要 {{count}} 个字符",
+  "maxLength": "{{field}}最多不能超过 {{count}} 个字符"
+}

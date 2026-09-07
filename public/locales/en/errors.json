@@ -1,0 +1,12 @@
+{
+  "network": "Network error. Please check your connection and try again.",
+  "validation": "Please review the form and fix the highlighted errors.",
+  "unauthenticated": "Please sign in to continue.",
+  "forbidden": "You do not have permission to perform this action.",
+  "not_found": "The requested resource was not found.",
+  "conflict": "This conflicts with an existing change. Please refresh.",
+  "rate_limited": "Too many requests. Please try again later.",
+  "server": "Server error. Please try again later.",
+  "unknown": "An unexpected error occurred.",
+  "timeout": "The request timed out. Please try again."
+}
