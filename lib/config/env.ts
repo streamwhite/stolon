@@ -5,6 +5,12 @@ const serverEnvSchema = z.object({
     .enum(["development", "test", "production"])
     .default("development"),
   API_INTERNAL_URL: z.url().optional(),
+  PAGE_RATE_LIMIT_MARKETING_POINTS: z.coerce.number().int().positive().default(120),
+  PAGE_RATE_LIMIT_MARKETING_DURATION_SECONDS: z.coerce.number().int().positive().default(60),
+  PAGE_RATE_LIMIT_AUTH_POINTS: z.coerce.number().int().positive().default(30),
+  PAGE_RATE_LIMIT_AUTH_DURATION_SECONDS: z.coerce.number().int().positive().default(60),
+  PAGE_RATE_LIMIT_APP_POINTS: z.coerce.number().int().positive().default(60),
+  PAGE_RATE_LIMIT_APP_DURATION_SECONDS: z.coerce.number().int().positive().default(60),
 });
 
 const clientEnvSchema = z.object({
@@ -29,6 +35,12 @@ function readServerEnv(): z.infer<typeof serverEnvSchema> {
   const parsed = serverEnvSchema.safeParse({
     NODE_ENV: process.env.NODE_ENV,
     API_INTERNAL_URL: process.env.API_INTERNAL_URL,
+    PAGE_RATE_LIMIT_MARKETING_POINTS: process.env.PAGE_RATE_LIMIT_MARKETING_POINTS,
+    PAGE_RATE_LIMIT_MARKETING_DURATION_SECONDS: process.env.PAGE_RATE_LIMIT_MARKETING_DURATION_SECONDS,
+    PAGE_RATE_LIMIT_AUTH_POINTS: process.env.PAGE_RATE_LIMIT_AUTH_POINTS,
+    PAGE_RATE_LIMIT_AUTH_DURATION_SECONDS: process.env.PAGE_RATE_LIMIT_AUTH_DURATION_SECONDS,
+    PAGE_RATE_LIMIT_APP_POINTS: process.env.PAGE_RATE_LIMIT_APP_POINTS,
+    PAGE_RATE_LIMIT_APP_DURATION_SECONDS: process.env.PAGE_RATE_LIMIT_APP_DURATION_SECONDS,
   });
   if (!parsed.success) {
     throw new Error(

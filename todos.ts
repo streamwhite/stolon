@@ -12,6 +12,8 @@ export const content = [
     new: [
       `font,use system font`,
       `remove dash and settings page, keep only home`,
+      `add rate limit with rate-limiter-flexible`,
+      `use registry`,
     ],
   },
 ];
